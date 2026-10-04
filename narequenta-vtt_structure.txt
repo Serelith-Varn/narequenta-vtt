@@ -1,0 +1,33 @@
+📁 Root: G:\Git\narequenta-vtt
+├── 📂 lang/
+│   ├── 📄 en.json
+│   └── 📄 pt.json
+├── 📂 module/
+│   ├── 📄 actor-sheet.js
+│   ├── 📄 actor.js
+│   ├── 📄 constants.js
+│   ├── 📄 helper.js
+│   ├── 📄 item-sheet.js
+│   ├── 📄 item.js
+│   ├── 📄 macro.js
+│   ├── 📄 narequenta.js
+│   ├── 📄 templates.js
+│   └── 📄 token.js
+├── 📂 styles/
+│   ├── 📄 narequenta.css
+│   └── 📄 narequenta.less
+├── 📂 templates/
+│   ├── 📂 parts/
+│   │   ├── 📄 sheet-attributes.html
+│   │   └── 📄 sheet-groups.html
+│   ├── 📄 actor-sheet.html
+│   └── 📄 item-sheet.html
+├── 📄 .gitattributes
+├── 📄 CHANGELOG.md
+├── 📄 gulpfile.js
+├── 📄 header_image.png
+├── 📄 LICENSE.md
+├── 📄 package.json
+├── 📄 README.md
+├── 📄 system.json
+└── 📄 template.json

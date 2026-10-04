@@ -1,0 +1,102 @@
+<form class="{{cssClass}}" autocomplete="off">
+    
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{item.name}}" placeholder="Name"/>
+            </h1>
+            
+            {{!-- MECHANICS GRID --}}
+            <div class="resource-row" style="display: flex; gap: 10px; align-items: center; margin-top: 5px;">
+                
+                {{!-- Weight: Updated placeholder to show new standard classes --}}
+                <div class="resource">
+                    <label>Weight:</label>
+                    <input type="number" name="system.weight" value="{{systemData.weight}}" placeholder="10/15/20" style="width: 60px; text-align: center;" title="Light: 10, Medium: 15, Heavy: 20">
+                </div>
+
+                {{!-- Range --}}
+                <div class="resource">
+                    <label>Range (ft):</label>
+                    <input type="number" name="system.range" value="{{systemData.range}}" placeholder="5" style="width: 60px; text-align: center;">
+                </div>
+
+                {{!-- Target Type --}}
+                <div class="resource">
+                    <label>Target:</label>
+                    <select name="system.target_type" style="height: 22px; font-size: 0.8em;">
+                        {{#select systemData.target_type}}
+                        <option value="one">Single Target</option>
+                        <option value="aoe">Area (AoE)</option>
+                        <option value="self">Self Only</option>
+                        {{/select}}
+                    </select>
+                </div>
+
+                {{!-- Affects Resource --}}
+                <div class="resource">
+                    <label>Affects:</label>
+                    <select name="system.target_resource" style="height: 22px; font-size: 0.8em;">
+                        {{#select systemData.target_resource}}
+                        <option value="hp">HP</option>
+                        <option value="vitalis">VITALIS</option>
+                        <option value="motus">MOTUS</option>
+                        <option value="sensus">SENSUS</option>
+                        <option value="verbum">VERBUM</option>
+                        <option value="anima">ANIMA</option>
+                        {{/select}}
+                    </select>
+                </div>
+            </div>
+            
+            {{!-- Damage/Heal Formula --}}
+            <div class="resource-row" style="margin-top: 5px;">
+                 <label style="font-weight:bold; margin-right:5px;">Dmg/Heal Formula:</label>
+                 <input type="text" name="system.damage_bonus" value="{{systemData.damage_bonus}}" placeholder="e.g. -1d4 (Heal) or 2 (Damage)" style="flex:1;">
+            </div>
+        </div>
+    </header>
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="description">{{localize "Description"}}</a>
+        <a class="item" data-tab="details">{{localize "Details"}}</a>
+        <a class="item" data-tab="attributes">{{localize "Attributes"}}</a>
+    </nav>
+
+    <section class="sheet-body">
+        <div class="tab" data-group="primary" data-tab="description">
+            {{editor descriptionHTML target="system.description" button=true editable=editable engine="prosemirror"}}
+        </div>
+
+        <div class="tab" data-group="primary" data-tab="details">
+            <div class="essence-grid-container">
+                <h3 style="border-bottom: 1px solid #333; margin-bottom: 10px;">Action Costs & Scaling</h3>
+                <div class="form-group">
+                    <label><strong>Motor Essence ($E_P$):</strong></label>
+                    <select name="system.cost.motor" style="width: 100%;">
+                        {{#select systemData.cost.motor}}
+                        {{#each systemData.essencesList as |label key|}}
+                            <option value="{{key}}">{{label}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+                <div class="form-group" style="margin-top: 10px;">
+                    <label><strong>Quality Essence ($E_S$):</strong></label>
+                    <select name="system.cost.quality" style="width: 100%;">
+                        {{#select systemData.cost.quality}}
+                        {{#each systemData.essencesList as |label key|}}
+                            <option value="{{key}}">{{label}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+            {{> "systems/narequenta/templates/parts/sheet-groups.html"}}
+        </div>
+    </section>
+</form>

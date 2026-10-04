@@ -1,0 +1,65 @@
+{
+  "NAREQUENTA.GameTitle": "Nárëquenta: Tales of the Waning",
+
+  "SETTINGS.SimpleMacroShorthandN": "Shortened Macro Syntax",
+  "SETTINGS.SimpleMacroShorthandL": "Enable shortened syntax. Allows referencing essences directly, for example @vitalis instead of @essences.vitalis.value.",
+  "SETTINGS.SimpleInitFormulaN": "Initiative Formula",
+  "SETTINGS.SimpleInitFormulaL": "Enter an initiative formula. Recommended: 1d10 + @essences.sensus.tier",
+
+  "NAREQUENTA.ItemCreate": "Create Ability",
+  "NAREQUENTA.ItemEdit": "Edit Ability",
+  "NAREQUENTA.ItemDelete": "Delete Ability",
+  "NAREQUENTA.ItemNew": "New Ability",
+
+  "NAREQUENTA.NotifyInitFormulaUpdated": "Initiative formula updated to",
+  "NAREQUENTA.NotifyInitFormulaInvalid": "Initiative formula was invalid",
+
+  "NAREQUENTA.Health": "Hit Points",
+  "NAREQUENTA.EssenceMax": "Soul's Peak",
+  "NAREQUENTA.EssenceCur": "Active Vigor",
+  "NAREQUENTA.EssenceTier": "Tier / Waning Yield",
+  "NAREQUENTA.ActionSurges": "Surges of Intent",
+
+  "NAREQUENTA.TabEssences": "Facets of the Self",
+  "NAREQUENTA.TabAbilities": "Abilities & Gear",
+  "NAREQUENTA.TabBiography": "The Legend (Bio)",
+  "NAREQUENTA.TabPromise": "Final Vow",
+
+  "NAREQUENTA.Vitalis": "VITALIS (Vigor, Presence)",
+  "NAREQUENTA.Motus": "MOTUS (Movement, Finesse)",
+  "NAREQUENTA.Sensus": "SENSUS (Awareness, Instinct)",
+  "NAREQUENTA.Verbum": "VERBUM (Intellect, Logic)",
+  "NAREQUENTA.Anima": "ANIMA (Will, Sacrifice)",
+
+  "NAREQUENTA.DefineTemplate": "Define as Template",
+  "NAREQUENTA.UnsetTemplate": "Unset Template",
+  "NAREQUENTA.NoTemplate": "No Template",
+
+  "NAREQUENTA.Create": "Create",
+  "NAREQUENTA.New": "New",
+  
+  "NAREQUENTA.RollSuccess": "Success",
+  "NAREQUENTA.RollFailure": "Failure",
+  "NAREQUENTA.AttritionApplied": "Attrition Applied (Motor/Quality)",
+  
+  "NAREQUENTA.AttributeKey": "Attribute Key",
+  "NAREQUENTA.AttributeValue": "Value",
+  "NAREQUENTA.AttributeLabel": "Label",
+  "NAREQUENTA.AttributeDtype": "Data Type",
+  "NAREQUENTA.ResourceMin": "Min",
+  "NAREQUENTA.ResourceValue": "Value",
+  "NAREQUENTA.ResourceMax": "Max",
+
+  "NAREQUENTA.NotifyAttrDuplicate": "Attribute key already exists as a group.",
+  "NAREQUENTA.NotifyGroupDuplicate": "Attribute group already exists.",
+  "NAREQUENTA.NotifyGroupAttrDuplicate": "Attribute group already exists as an attribute.",
+  "NAREQUENTA.NotifyGroupReserved": "Attribute group \"{key}\" is reserved and cannot be used.",
+  "NAREQUENTA.NotifyGroupAlphanumeric": "Attribute group names may not contain spaces or periods.",
+  "NAREQUENTA.NotifyAttrInvalid": "Attribute keys may not contain spaces or periods.",
+  
+  "NAREQUENTA.DeleteGroup": "Delete group?",
+  "NAREQUENTA.DeleteGroupContent": "Do you wish to delete this group? This will delete the following group and all attributes included in it: ",
+  
+  "Yes": "Yes",
+  "No": "No"
+}
